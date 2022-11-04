@@ -1,0 +1,15 @@
+package object_oriented;
+
+public class Goblin extends Monster{
+	public Goblin(String name, int hp, int attack, int defense) {
+		this.setName(name);
+		this.setHp(hp);
+		this.setAttack(attack);
+		this.setDefense(defense);
+	}
+	public void G_Attack(Unit u) {
+		System.out.println(this.getName()+ ": 剣の攻撃!");
+		System.out.println(this.getAttack() + "ダメージを与えた!");
+		u.setHp(u.getHp() - this.getAttack());
+		}
+}
