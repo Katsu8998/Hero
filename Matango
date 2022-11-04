@@ -1,0 +1,16 @@
+package object_oriented;
+
+public class Matango extends Monster {
+
+	public Matango(String name, int hp, int attack, int defense) {
+		this.setName(name);
+		this.setHp(hp);
+		this.setAttack(attack);
+		this.setDefense(defense);
+	}
+	public void M_Attack(Unit u) {
+		System.out.println(this.getName()+ "の胞子攻撃!");
+		System.out.println(this.getAttack() + "ダメージを与えた!");
+		u.setHp(u.getHp() - this.getAttack());
+		}
+	}
