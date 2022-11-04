@@ -1,0 +1,19 @@
+package object_oriented;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Hero h = new Hero("minato", 30, 15, 15);
+		Cleric c = new Cleric("asaka", 10, 10, 10, 10);
+		Wizard w = new Wizard("sugawara", 10, 10, 10);
+
+		Monster[] m = new Monster[3];
+		m[0] = new Slime("スライム", 5, 5, 5);
+		m[1] = new Matango("マタンゴ", 5, 10, 5);
+		m[2] = new Goblin("ゴブリン", 5, 10, 5);
+
+		for (int i = 0; i < m.length; i++) {
+			h.Attack(m[i]);
+		}
+	}
+}
