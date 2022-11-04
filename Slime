@@ -1,0 +1,15 @@
+package object_oriented;
+
+public class Slime extends Monster{
+	public Slime(String name, int hp, int attack, int defense) {
+		this.setName(name);
+		this.setHp(hp);
+		this.setAttack(attack);
+		this.setDefense(defense);
+	}
+	public void Attack(Unit u) {
+		System.out.println(this.getName()+ "体当たりをした!");
+		System.out.println(this.getAttack() + "ダメージを与えた!");
+		u.setHp(u.getHp() - this.getAttack());
+		}
+}
