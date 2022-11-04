@@ -1,0 +1,16 @@
+package object_oriented;
+
+public class Wizard extends Unit {
+	public Wizard(String name, int hp, int attack, int defense) {
+		this.setName(name);
+		this.setHp(hp);
+		this.setAttack(attack);
+		this.setDefense(defense);
+	}
+
+	public void Attack(Monster m) {
+		System.out.println(this.getName() + "は攻撃した!");
+		System.out.println(this.getAttack() + "ダメージを与えた!");
+		m.setHp(m.getHp() - this.getAttack());
+	}
+}
